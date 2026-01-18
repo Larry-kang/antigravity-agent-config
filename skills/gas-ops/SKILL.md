@@ -1,46 +1,48 @@
 ---
 name: gas-ops
-description: Google Apps Script Àç¹B»P¶}µo¤u¨ã½c
-version: 1.0.0
+description: Google Apps Script ç‡Ÿé‹èˆ‡é–‹ç™¼æµç¨‹è¦ç¯„ (å« CI/CD è‡ªå‹•åŒ–)
+version: 1.1.0
 ---
 
 # GAS Ops Skill
 
-¦¹§Ş¯à´£¨Ñ Google Apps Script (GAS) ±M®×ªº¼Ğ·Ç¶}µo¬yµ{¡A¾ã¦X `clasp` ¤u¨ã¶i¦æ¶³ºİ¦P¨B¡C
+æ­¤æŠ€èƒ½è¦ç¯„ Google Apps Script (GAS) é–‹ç™¼çš„æ¨™æº–æµç¨‹ï¼Œçµåˆ `clasp` å·¥å…·èˆ‡ GitHub Actions å¯¦ç¾è‡ªå‹•åŒ–éƒ¨å±¬èˆ‡ç‰ˆæœ¬æ§åˆ¶ã€‚
 
-## ¨Ì¿à»İ¨D (Dependencies)
-- Node.js & npm
-- @google/clasp (¥ş°ì©Î¥»¦a¦w¸Ë)
-- ­Y¥¼¦w¸Ë¡A½Ğ°õ¦æ: `npm install -g @google/clasp`
+## ç’°å¢ƒä¾è³´ (Dependencies)
+- Node.js & npm (ç³»çµ±ç’°å¢ƒ)
+- @google/clasp (å…¨åŸŸå®‰è£: `npm install -g @google/clasp`)
+- GitHub Actions (ç”¨æ–¼è‡ªå‹•åŒ–éƒ¨å±¬)
 
-## ´£¨Ñªº«ü¥O (Commands)
+## æ¨™æº–é–‹ç™¼æµç¨‹ (Workflow)
 
-### 1. Push to Cloud (±À°e¨ì¶³ºİ)
-±N¥»¦a¥N½X±À°e¨ì Google Apps Script ±M®×¡C
-¦¹«ü¥O·|¦Û°Ê³B²z `.js` ¨ì `.gs` ªºÂà´«¡]­Y¦³°t¸m¡^¡C
-
-```powershell
-clasp push
-```
-
-### 2. Pull from Cloud (±q¶³ºİ©Ô¨ú)
-±q Google Apps Script ±M®×©Ô¨ú³Ì·s¥N½X¡C
-**ª`·N**: ³o±N·|ÂĞ»\¥»¦aÅÜ§ó¡C
-
+### 1. æœ¬åœ°é–‹ç™¼èˆ‡åŒæ­¥
+åœ¨æœ¬åœ°é€²è¡Œé–‹ç™¼å¾Œï¼Œé€šé Git æäº¤ä»£ç¢¼ã€‚è‹¥éœ€å¾ GAS ç¶²é å·¥ä½œå€åŒæ­¥å›æœ¬åœ°ï¼š
 ```powershell
 clasp pull
 ```
 
-### 3. Deploy (³¡¸pª©¥»)
-«Ø¥ß·sªº¤£¥iÅÜª©¥» (Version) ¨Ã§ó·s³¡¸p (Deployment)¡C
+### 2. è‡ªå‹•åŒ–éƒ¨å±¬ (GitHub Actions)
+å°ˆæ¡ˆæ‡‰é…ç½® `.github/workflows/deploy.yml`ï¼Œåœ¨æ¨é€åˆ°ç‰¹å®šåˆ†æ”¯ï¼ˆå¦‚ `master` æˆ– `main`ï¼‰æ™‚è‡ªå‹•åŸ·è¡Œéƒ¨å±¬ã€‚
+- **æ©Ÿåˆ¶**: GitHub Action æœƒå®‰è£ `clasp` ä¸¦åˆ©ç”¨ `CLASPRC_JSON_BASE64` ç§˜å¯†é‡‘é‘°é€²è¡Œæˆæ¬Šã€‚
+- **æŒ‡ä»¤**: `clasp push --force`
 
+### 3. æ‰‹å‹•æ€¥ä¿® (Manual Emergency Push)
+åƒ…åœ¨ CI/CD å¤±æ•ˆä¸”éœ€ç·Šæ€¥ä¿®å¾©æ™‚ä½¿ç”¨ï¼š
 ```powershell
-clasp version "Auto-deploy: $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-# »İ·f°t deploymentId ¨Ï¥Î¡A³q±`«ØÄ³¤â°Ê½T»{ ID
-# clasp deploy -i [deploymentId] -d "Description"
+clasp push
 ```
 
-## ³Ì¨Î¹ê½î (Best Practices)
-1.  **Always Pull First**: ­×§ï«e¥ı Pull¡AÁ×§Kª©¥»½Ä¬ğ¡C
-2.  **Use TypeScript/JSDoc**: µ½¥Î«¬§OÀË¬d´î¤Ö Runtime ¿ù»~¡C
-3.  **Local Testing**: ºÉ¥i¯à±NÅŞ¿è©âÂ÷¦¨¯Â JS ¨ç?¡A¦b¥»¦a¥Î Node.js ´ú¸Õ«á¦A Push¡C
+## CI/CD é…ç½®è¦ç¯„
+
+### èªè­‰é‡‘é‘°è™•ç†
+1. åŸ·è¡Œ `clasp login` ç²å–æœ¬åœ° `~/.clasprc.json`ã€‚
+2. å°‡è©²æª”æ¡ˆå…§å®¹è½‰æ›ç‚º Base64 å­—ä¸²ï¼š
+   ```powershell
+   [Convert]::ToBase64String([IO.File]::ReadAllBytes("$HOME\.clasprc.json"))
+   ```
+3. å°‡çµæœå­˜å…¥ GitHub Repository Secretsï¼Œåç¨±ç‚º `CLASPRC_JSON_BASE64`ã€‚
+
+## æœ€ä½³å¯¦è¸ (Best Practices)
+1. **GitHub ç‚ºå–®ä¸€çœŸç›¸ä¾†æº**: å§‹çµ‚ä¿¡ä»» Git ä¸Šçš„ä»£ç¢¼ã€‚é¿å…åœ¨ GAS ç¶²é å·¥ä½œå€ç›´æ¥ä¿®æ”¹ä»£ç¢¼ï¼Œé™¤éæ˜¯ç‚ºäº†å¿«é€Ÿæ¸¬è©¦ä¸¦éš¨å³ `clasp pull` å›æœ¬åœ°ã€‚
+2. **è‡ªå‹•åŒ–å„ªå…ˆ**: å„˜é‡é€é `git push` è§¸ç™¼ Action é€²è¡Œéƒ¨å±¬ï¼Œç¢ºä¿éƒ¨ç½²ç´€éŒ„èˆ‡ Git Commit é—œè¯ã€‚
+3. **å¼·åˆ¶æ›´æ–°**: ç·šä¸Šç’°å¢ƒéƒ¨å±¬å»ºè­°ä½¿ç”¨ `clasp push --force` ä»¥é¿å…æ–‡ä»¶ç‰ˆæœ¬è¡çªã€‚

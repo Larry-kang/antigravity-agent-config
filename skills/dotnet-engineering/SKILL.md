@@ -1,48 +1,41 @@
 ---
 name: dotnet-engineering
-description: .NET ±M®×¤uµ{¤Æ¤u¨ã (Build, Test, Nuget)
+description: .NET èªè¨€å·¥ç¨‹è¦ç¯„ (æ¶æ§‹ã€ç·¨ç¢¼ã€å–®å…ƒæ¸¬è©¦)
 version: 1.0.0
 ---
 
 # .NET Engineering Skill
 
-¦¹§Ş¯à´£¨Ñ C# / .NET ±M®×ªº¼Ğ·Ç«Ø¸m»P´ú¸Õ¬yµ{¡C
+æ­¤æŠ€èƒ½è¦ç¯„èˆ‡ç¶­è­· .NET å°ˆæ¡ˆçš„é–‹ç™¼ç’°å¢ƒèˆ‡ç¨‹å¼ç¢¼å“è³ªæ¨™æº–ï¼ŒåŒ…å« C# ç·¨ç¢¼é¢¨æ ¼ã€å°ˆæ¡ˆæ¶æ§‹èˆ‡æ¸¬è©¦è‡ªå‹•åŒ–ã€‚
 
-## ¨Ì¿à»İ¨D (Dependencies)
-- .NET SDK (6.0, 7.0, or 8.0)
-- PowerShell
+## æ ¸å¿ƒè¦å‰‡ (Core Rule)
 
-## ´£¨Ñªº«ü¥O (Commands)
+### 1. èªè¨€ç‰ˆæœ¬èˆ‡é¸å‹
+- **å„ªå…ˆä½¿ç”¨**: .NET 8.0 æˆ–æ›´é«˜ç‰ˆæœ¬ã€‚
+- **ç•°æ­¥ç¨‹å¼é–‹ç™¼**: é™¤éåº«ä¸æ”¯æŒï¼Œå¦å‰‡æ‰€æœ‰ I/O å¯†é›†å‹æ“ä½œå¿…é ˆä½¿ç”¨ `async/await`ã€‚
+- **å‘½åè¦ç¯„**: åš´æ ¼éµå¾ª Microsoft C# å‘½åæ…£ä¾‹ (PascalCase for Classes/Members, camelCase for local variables)ã€‚
 
-### 1. Build Solution («Ø¸m±M®×)
-½sÄ¶¤è®×ÀÉ (.sln)¡A½T«O¨S¦³»yªk¿ù»~¡C
+### 2. ç·¨ç¢¼å¼·åˆ¶å”å®š (UTF-8 Protocol)
+- **åŸå§‹ç¢¼ç·¨ç¢¼**: æ‰€æœ‰ `.cs` èˆ‡ `.csproj` æª”æ¡ˆå¿…é ˆä¿å­˜ç‚º **UTF-8 with BOM** (ç¢ºä¿ Visual Studio å…¼å®¹æ€§) æˆ–ç´” **UTF-8**ã€‚
+- **ä¸­æ–‡è™•ç†**: ç¨‹å¼ç¢¼è¨»è§£å¿…é ˆä½¿ç”¨ç¹é«”ä¸­æ–‡ã€‚è‹¥åœ¨å­—ä¸²ä¸­å‡ºç¾ä¸­æ–‡ï¼Œç¢ºä¿å°ˆæ¡ˆç·¨ç¢¼è¨­å®šæ­£ç¢ºï¼Œé¿å…åŸ·è¡ŒæœŸäº‚ç¢¼ã€‚
 
+### 3. å–®å…ƒæ¸¬è©¦ (Unit Testing)
+- **æ¸¬è©¦æ¡†æ¶**: xUnit (é¦–é¸)ã€‚
+- **DoD (Definition of Done)**: æ‰€æœ‰é‚è¼¯ç•°å‹•å¿…é ˆå…·å‚™å°æ‡‰çš„å–®å…ƒæ¸¬è©¦ï¼Œä¸”æ¸¬è©¦è¦†è“‹ç‡éœ€ä¿æŒåœ¨ 80% ä»¥ä¸Šã€‚
+
+## å¸¸ç”¨æ“ä½œ
+
+### å°ˆæ¡ˆç·¨è­¯ (dotnet CLI)
 ```powershell
-dotnet build --configuration Release
+dotnet build
 ```
 
-### 2. Run Tests (°õ¦æ´ú¸Õ)
-±½´y±M®×¤¤ªº´ú¸Õ±M®×¨Ã°õ¦æ¡C¿é¥X¸Ô²Óµ²ªG¡C
-
+### åŸ·è¡Œå–®å…ƒæ¸¬è©¦
 ```powershell
-dotnet test --verbosity normal
+dotnet test
 ```
 
-### 3. Restore Packages (ÁÙ­ì®M¥ó)
-ÁÙ­ì NuGet ¬Û¨Ì®M¥ó¡C³q±`¦b­è clone ±M®×®É°õ¦æ¡C
-
+### å»ºç«‹æ–°é·ç§» (Entity Framework Core)
 ```powershell
-dotnet restore
+dotnet ef migrations add [MigrationName]
 ```
-
-### 4. Clean Artifacts (²M²z¼È¦s)
-²M²z `bin/` ©M `obj/` ¸ê®Æ§¨¡A¸Ñ¨M©_¯Sªº½sÄ¶§Ö¨ú°İÃD¡C
-
-```powershell
-dotnet clean
-```
-
-## ³Ì¨Î¹ê½î (Best Practices)
-1.  **Treat Warnings as Errors**: «O«ù½sÄ¶¿é¥X°®²b¡C
-2.  **Separate Test Projects**: ¨C­Ó®Ö¤ß±M®×À³¹ïÀ³¤@­Ó´ú¸Õ±M®× (¨Ò¦p `Core.Tests`)¡C
-3.  **Use launchSettings.json**: ºŞ²z¥»¦a¶}µoªºÀô¹ÒÅÜ¼Æ¡C

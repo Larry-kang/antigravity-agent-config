@@ -1,48 +1,42 @@
 ---
 name: python-ops
-description: Python �q�ξާ@�ޯ� (���Һ޲z�B���澹)
+description: Python 環境與操作規範 (環境管理、執行、編碼)
 version: 1.0.0
 ---
 
 # Python Ops Skill
 
-���ޯണ�Ѹ�M�ת� Python ����зǡA�T�O�ϥΥ��T���������� (Virtual Environment)�C
+此技能規範與維護 Python 開發環境標準，確保使用正確的虛擬環境 (Virtual Environment) 與編碼輸出。
 
-## �֤߳W�h (Core Rule)
-**�u���ϥαM�פ����� Python������**
-���F�T�O���Ҥ@�P�ʡAAgent �����u���ˬd�H�U���|�Ӱ��� Python�G
-1.  `.bin/python/python.exe` (�̨ι��GSovereign Alpha �з�)
-2.  `.venv/Scripts/python.exe` (�з� venv)
-3.  `venv/Scripts/python.exe`
-4.  �̫�~�ϥΨt�� PATH �� `python`
+## 核心規則 (Core Rule)
 
-## ���Ѫ����O (Commands)
+### 1. 虛擬環境執行
+- **環境路徑**: `.bin/python/python.exe`
+- **使用原則**: 嚴禁直接使用系統 `python`。所有本專案腳本必須通過 `.bin/python/python.exe` 執行。
+- **WSL 模式**: 於 WSL 環境下，則使用 `wsl python3`。
 
-### 1. Run Script (����}��)
-�ϥΰ����쪺�̨� Python ���Ұ���}���C
+### 2. 編碼強制協定 (UTF-8 Protocol)
+- **輸入讀取**: 讀取檔案時必須顯式指定 `encoding='utf-8'`。
+- **輸出寫入**: 寫入檔案時必須顯式指定 `encoding='utf-8'`。
+- **控制台輸出**: 腳本開頭必須 reconfiguration `sys.stdout` 確保終端顯示正常：
+  ```python
+  import sys
+  sys.stdout.reconfigure(encoding='utf-8')
+  ```
 
+### 3. Mojibake 修復
+- 若腳本產出亂碼，優先檢查輸出檔案的編碼宣告。
+- 禁止對亂碼進行二進位強制轉碼，應從資料源頭重寫為純 UTF-8。
+
+## 常用操作
+
+### 環境修復
+若虛擬環境損毀或依賴遺失，執行：
 ```powershell
-# �ЮھڱM�׵��c�ۦ�������|
+python ops/repair_project.py
+```
+
+### 腳本執行 (Powershell)
+```powershell
 .bin\python\python.exe scripts/your_script.py
 ```
-
-### 2. Check Environment (�ˬd����)
-�T�{�ثe�ϥΪ� Python �����P���|�C
-
-```powershell
-Get-Command python | Select-Object Source
-python --version
-```
-
-### 3. Pip Install (�w�ˮM��)
-**ĵ�i**: �Ȧb���v�t�d���M�� (Owned Project) ������C
-���w�� `requirements.txt` ���M�סG
-
-```powershell
-pip install -r requirements.txt
-```
-
-## �̨ι�� (Best Practices)
-1.  **Always use Full Path**: �b Prompt ����ĳ�g�X `.bin\python\python.exe` �H���T���O�C
-2.  **No System Pollution**: �Y�T�b�������� `pip install`�A���D�O�}�o�̩��T�n�D�C
-3.  **UTF-8 Handling**: Python �B�z����ɡA�нT�O `PYTHONIOENCODING=utf-8` �Φb�{���X�����T���w�s�X�C
