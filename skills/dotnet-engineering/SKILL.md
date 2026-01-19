@@ -1,7 +1,8 @@
 ---
 name: dotnet-engineering
 description: .NET 語言工程規範 (架構、編碼、單元測試)
-version: 1.0.0
+metadata:
+  version: "1.0.0"
 ---
 
 # .NET Engineering Skill

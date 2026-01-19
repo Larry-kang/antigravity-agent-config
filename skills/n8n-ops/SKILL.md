@@ -1,7 +1,8 @@
 ---
 name: n8n-ops
 description: n8n Workflow 自動化管理與開發工具
-version: 1.0.0
+metadata:
+  version: "1.0.0"
 ---
 
 # n8n Operations (n8n-ops)

@@ -1,7 +1,8 @@
 ---
 name: markdown-quality
 description: 確保所有 Markdown 文件符合編碼與格式品質標準
-version: 1.0.0
+metadata:
+  version: "1.0.0"
 ---
 
 # Markdown Quality Skill

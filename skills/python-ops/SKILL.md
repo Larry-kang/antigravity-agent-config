@@ -1,7 +1,8 @@
 ---
 name: python-ops
 description: Python 環境與操作規範 (環境管理、執行、編碼)
-version: 1.0.0
+metadata:
+  version: "1.0.0"
 ---
 
 # Python Ops Skill

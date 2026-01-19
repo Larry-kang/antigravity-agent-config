@@ -1,7 +1,8 @@
 ---
 name: git-branching
 description: 標準化 Git 分支策略與版本控制工作流程
-version: 1.0.0
+metadata:
+  version: "1.0.0"
 ---
 
 # Git Branching Skill
