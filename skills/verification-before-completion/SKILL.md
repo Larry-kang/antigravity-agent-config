@@ -1,6 +1,6 @@
 ---
 name: verification-before-completion
-description: Use before declaring any task complete. Ensures the fix actually works and prevents premature completion claims.
+description: Use when you are about to declare a task complete. Ensures the fix actually works and prevents premature completion claims.
 metadata:
   version: "1.0.0"
   source: "Adapted from obra/superpowers"

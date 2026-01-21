@@ -1,6 +1,6 @@
 ---
 name: document-quality
-description: Ensures all generated documents meet quality standards including encoding, language, and formatting. Use before committing any research documents.
+description: Use when ensuring generated documents meet quality standards or before committing research documents. Ensures compliance with encoding, language, and formatting standards.
 ---
 
 # Document Quality Skill
@@ -22,9 +22,9 @@ This skill ensures all research documents maintain consistent quality standards,
 - Consistent line endings (CRLF for Windows)
 
 ### 2. Language Requirements
-- **Traditional Chinese** (¡c≈È§§§Â) for all content
-- **No Simplified Chinese** (? ^§§§Â)
-- **No¥π¥π≈È** (mixed Chinese-English), except:
+- **Traditional Chinese** (ÁπÅÈ´î‰∏≠Êñá) for all content
+- **No Simplified Chinese** (Á∞°‰Ωì‰∏≠Êñá)
+- **NoÊô∂Êô∂È´î** (mixed Chinese-English), except:
   - Technical terms (API, Docker, Git)
   - Proper nouns (NVDA, BTC, TSMC)
   - Code snippets
@@ -68,7 +68,7 @@ Call /document-review
 ## Common Issues & Solutions
 
 ### Issue 1: Encoding Errors
-**Symptom**: Garbled Chinese characters (∂√ΩX)
+**Symptom**: Garbled Chinese characters (‰∫ÇÁ¢º)
 ```
 Example: ?A?O?u??N?`??v
 ```
@@ -83,7 +83,7 @@ Example: ?A?O?u??N?`??v
 ```
 
 ### Issue 2: Simplified Chinese Leaks
-**Symptom**: Characters like ? ^°B…¨§∆°B?’u
+**Symptom**: Characters like ?‰Ωì„ÄÅ‰ºòÂåñ„ÄÅ?ÊçÆ
 
 **Solution**: Linter auto-detects and flags for manual correction
 
@@ -103,7 +103,7 @@ Before committing any document, verify:
 
 - [ ] **Encoding**: UTF-8 without BOM
 - [ ] **Language**: Traditional Chinese only
-- [ ] **No¥π¥π≈È**: Except technical terms
+- [ ] **NoÊô∂Êô∂È´î**: Except technical terms
 - [ ] **No Garbage**: Clean character set
 - [ ] **Formatting**: Proper Markdown structure
 - [ ] **Completeness**: All sections present

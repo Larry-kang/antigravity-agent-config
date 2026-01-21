@@ -1,6 +1,6 @@
 ---
 name: notion-sync
-description: Handles Notion synchronization operations including state management and encoding validation. Use when syncing research documents to Notion.
+description: Use when syncing research documents to Notion. Handles Notion synchronization operations including state management and encoding validation.
 ---
 
 # Notion Sync Skill

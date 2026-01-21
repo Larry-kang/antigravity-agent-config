@@ -1,6 +1,6 @@
 ---
 name: gas-ops
-description: Google Apps Script 營運與開發流程規範 (含 CI/CD 自動化)
+description: Use when developing, operating, or deploying Google Apps Script projects with CI/CD automation.
 metadata:
   version: "1.1.0"
 ---

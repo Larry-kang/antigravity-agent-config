@@ -1,6 +1,6 @@
 ---
 name: dotnet-engineering
-description: .NET 語言工程規範 (架構、編碼、單元測試)
+description: Use when designing architecture, writing code, or performing unit tests in .NET projects. Enforces coding standards and architecture patterns.
 metadata:
   version: "1.0.0"
 ---

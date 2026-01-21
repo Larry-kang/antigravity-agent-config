@@ -1,6 +1,6 @@
 ---
 name: git-branching
-description: 標準化 Git 分支策略與版本控制工作流程
+description: Use when planning or executing Git branching operations and standardizing version control workflows.
 metadata:
   version: "1.0.0"
 ---

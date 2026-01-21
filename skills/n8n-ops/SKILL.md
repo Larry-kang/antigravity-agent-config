@@ -1,6 +1,6 @@
 ---
 name: n8n-ops
-description: n8n Workflow 自動化管理與開發工具
+description: Use when managing, developing, or deploying n8n workflows. Handles automated workflow management and tool configuration.
 metadata:
   version: "1.0.0"
 ---

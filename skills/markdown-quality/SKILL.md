@@ -1,6 +1,6 @@
 ---
 name: markdown-quality
-description: 確保所有 Markdown 文件符合編碼與格式品質標準
+description: Use when validating Markdown files for encoding, formatting, and quality standards. Ensures global documentation consistency.
 metadata:
   version: "1.0.0"
 ---

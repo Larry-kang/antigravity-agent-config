@@ -1,6 +1,6 @@
 ---
 name: python-scripting
-description: Ensures correct Python script execution using project-specific interpreter. Use when running any Python scripts in this project to avoid environment issues.
+description: Use when running any Python scripts in this project to avoid environment issues. Ensures correct Python script execution using project-specific interpreter.
 ---
 
 # Python Scripting Skill

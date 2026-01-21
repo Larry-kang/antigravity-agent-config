@@ -1,6 +1,6 @@
 ---
 name: git-ops
-description: Handles Git operations including branching, committing, and pushing. Use when workflows need to version-control changes following the Context-Aware Branching strategy.
+description: Use when workflows need to version-control changes following specific branching strategies. Handles Git operations including branching, committing, and pushing.
 ---
 
 # Git Operations Skill

@@ -1,6 +1,6 @@
 ---
 name: health-check
-description: Performs system health checks including environment repair and report linting. Use at the start of workflows to ensure a clean working state.
+description: Use when performing system health checks, environment repair, and report linting. Enforces workspace clean state.
 ---
 
 # Health Check Skill

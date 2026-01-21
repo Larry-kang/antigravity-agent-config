@@ -1,6 +1,6 @@
 ---
 name: python-ops
-description: Python 環境與操作規範 (環境管理、執行、編碼)
+description: Use when managing Python environments, executing code, or ensuring coding standards. Handles interpreter settings and package management.
 metadata:
   version: "1.0.0"
 ---

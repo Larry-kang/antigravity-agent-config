@@ -1,6 +1,6 @@
 ---
 name: quantitative-research
-description: Guides quantitative research workflows including data fetching, simulation, backtesting, and report generation. Use when analyzing tickers or running financial simulations.
+description: Use when analyzing tickers or running financial simulations. Guides quantitative research workflows including data fetching, simulation, backtesting, and report generation.
 ---
 
 # Quantitative Research Skill
