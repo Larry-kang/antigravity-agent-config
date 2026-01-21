@@ -13,7 +13,7 @@ description: 注入新市場洞察與知識 (Knowledge Injection SOP)
    - **Equity**: 個股財報、產業趨勢、機構評級。
    - **Strategy**: 交易策略、風險控管模型。
 2. **撰寫 Markdown**:
-   - 建議建立新檔案: `research/notes/Note_[Topic]_[Date].md`。
+   - 建議建立新檔案: `research/insights/Note_[Topic]_[Date].md`。
    - 或追加至 `my-ai-swarm/project-memory.md` (若為長期原則)。
 
 ## Phase 2: 關聯性連結 (Linking)

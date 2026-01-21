@@ -5,7 +5,7 @@ description: V4.0 全球標的深度研究標準 (Multi-Horizon & Compliance)
 # Ticker Deep Dive Workflow V4.0 (全球標的深度研究標準)
 
 ## 0. 執行規則 (Execution Rule)
-*   **默認行為**: 若未指定 Ticker，則自動遍歷 `research/tickers` 目錄下所有已存在的 `.md` 報告，進行更新。
+*   **默認行為**: 若未指定 Ticker，則自動遍歷 `research/reports/tickers` 目錄下所有已存在的 `.md` 報告，進行更新。
 *   **指定模式**: 若指定 Ticker (e.g. `TSMC`)，則只針對該標的執行。
 *   **新增標的**: 若需分析全新標的，請先執行 [/add-new-ticker](file:///.agent/workflows/add-new-ticker.md) 完成設定。
 
