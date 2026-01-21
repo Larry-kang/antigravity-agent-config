@@ -38,7 +38,7 @@ description: 執行每日風險預測與市場掃描 (Daily Risk Forecast & Mark
 ## Phase 2: 模擬驗證 (Simulation)
 1. **取得 BTC 價格**: 從 Phase 1 的搜索結果中提取當前 BTC 價格。
 2. **執行模擬**: 
-   - 運行指令: `.bin\python\python.exe scripts/daily_forecast_sim.py --price [BTC price]`
+   - 運行指令: `.bin\python\python.exe src/cli/run_daily.py --ticker BTC --price [BTC price]`
    - (註: 系統將自動讀取 `ticker_params.json` 的校準參數，除非您想手動覆寫 `--vol`)
 3. **讀取結果**: 記錄「破產機率 (Liquidation Rate)」與「平均淨值」。
 
