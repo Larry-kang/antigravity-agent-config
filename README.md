@@ -1,76 +1,39 @@
-# Antigravity Agent Config
+# Antigravity Agent é…ç½®åº« (Agent Configuration)
 
-> °ª«~½èªº AI Agent ¤uµ{³W½d»P§Ş¯à®w
+æœ¬ç›®éŒ„å­˜æ”¾äº† Antigravity AI ä»£ç†çš„æ ¸å¿ƒé…ç½®ã€è¡Œç‚ºæº–å‰‡ã€æŠ€èƒ½æ¨¡çµ„èˆ‡è‡ªå‹•åŒ–å·¥ä½œæµï¼Œæ—¨åœ¨ç¢ºä¿ Agent åœ¨é–‹ç™¼èˆ‡ç ”ç©¶ä»»å‹™ä¸­çš„ç©©å®šæ€§èˆ‡æ¨™æº–åŒ–ã€‚
 
-³o¬O¤@­Ó¬° Google Antigravity AI Agent ³]­pªº¥ş§½°t¸m±M®×¡A¥]§t§¹¾ãªº¤uµ{³W½d¡B§Ş¯à©w¸q»P¤u§@¬yµ{¡C
+## ç›®éŒ„çµæ§‹
 
-## ±M®×µ²ºc
-
-```
+```text
 .agent/
-¢u¢w¢w rules/              # ¥ş§½³W«h
-¢x   ¢|¢w¢w global_rules.md
-¢u¢w¢w skills/             # §Ş¯à®w
-¢x   ¢u¢w¢w gas-ops/        # Google Apps Script ¤uµ{³W½d
-¢x   ¢u¢w¢w dotnet-engineering/  # C# .NET ¤uµ{³W½d
-¢x   ¢u¢w¢w python-ops/     # Python ¤uµ{³W½d
-¢x   ¢u¢w¢w docker-ops/     # Docker ®e¾¹¤Æ³W½d
-¢x   ¢|¢w¢w wsl-ops/        # WSL ¾Ş§@³W½d
-¢u¢w¢w workflows/          # ¤u§@¬yµ{
-¢|¢w¢w scripts/            # ¤u¨ã¸}¥»
+â”œâ”€â”€ rules/             # æ ¸å¿ƒæº–å‰‡èˆ‡è¦ç¯„
+â”‚   â”œâ”€â”€ global_rules.md # å…¨åŸŸé–‹ç™¼èˆ‡è¡Œç‚ºæº–å‰‡
+â”‚   â””â”€â”€ project_rules.md # å°ˆæ¡ˆç‰¹å®šè¦å‰‡
+â”œâ”€â”€ skills/            # æŠ€èƒ½æ¨¡çµ„ (Skills)
+â”‚   â”œâ”€â”€ skill-factory/ # æŠ€èƒ½å·¥å»  (ç®¡ç†è¦ç¯„)
+â”‚   â”œâ”€â”€ gas-ops/       # Google Apps Script ç‡Ÿé‹è¦ç¯„
+â”‚   â”œâ”€â”€ dotnet-engineering/ # .NET å·¥ç¨‹æ¨™æº–
+â”‚   â””â”€â”€ ...            # å…¶ä»–å°ˆæ¥­æŠ€èƒ½
+â”œâ”€â”€ workflows/         # è‡ªå‹•åŒ–å·¥ä½œæµ (Workflows)
+â”‚   â”œâ”€â”€ daily-routine.md # æ¯æ—¥ä¾‹è¡Œåˆ†æ
+â”‚   â”œâ”€â”€ startup.md      # ç’°å¢ƒåˆå§‹åŒ–
+â”‚   â””â”€â”€ ...            # å…¶ä»–æ–œæ§“æŒ‡ä»¤å·¥ä½œæµ
+â””â”€â”€ README.md          # æœ¬èªªæ˜æ–‡ä»¶
 ```
 
-## §Ş¯à®w
+## æ ¸å¿ƒåŠŸèƒ½
 
-### ¤w«Ø¥ß§Ş¯à
+1. **è¦ç¯„å„ªå…ˆ**: æ‰€æœ‰ AI è¡Œç‚ºå‡å—åˆ° `rules/` ä¸‹çš„ Markdown è¦ç¯„ç´„æŸã€‚
+2. **æŠ€èƒ½æ“´å……**: é€é `skills/` ç›®éŒ„ï¼ŒAgent å¯ç²å¾—è™•ç†ç‰¹å®šæŠ€è¡“æ£§ï¼ˆå¦‚ .NET, GAS, Pythonï¼‰çš„èƒ½åŠ›ã€‚
+3. **æµç¨‹è‡ªå‹•åŒ–**: `workflows/` å®šç¾©äº†è¤‡é›œä»»å‹™çš„ SOPï¼Œå¯é€é Chat ä»‹é¢ä»¥æ–œæ§“æŒ‡ä»¤èª¿ç”¨ã€‚
 
-| §Ş¯à | ª©¥» | »¡©ú |
-|---|---|---|
-| [gas-ops](skills/gas-ops/SKILL.md) | v2.0.0 | Google Apps Script ¤uµ{³W½d (¶}µo¡B®Ä¯à¡BUI¡B´ú¸Õ¡BCI/CD) |
-| [dotnet-engineering](skills/dotnet-engineering/SKILL.md) | v2.0.0 | .NET ¤uµ{³W½d (¬[ºc¡B½s½X¡BSOLID¡B´ú¸Õ) |
-| [python-ops](skills/python-ops/SKILL.md) | v2.0.0 | Python ¤uµ{³W½d (PEP 8¡BType Hints¡B´ú¸Õ) |
-| [docker-ops](skills/docker-ops/SKILL.md) | v1.0.0 | Docker ®e¾¹¤Æ³W½d (Dockerfile¡BCompose¡B¦w¥ş©Ê) |
-| [wsl-ops](skills/wsl-ops/SKILL.md) | v1.0.0 | WSL ¾Ş§@³W½d (¦w¸Ë¡BÀÉ®×¨t²Î¡Bºô¸ô¡B¾ã¦X) |
+## ä½¿ç”¨æŒ‡å¼•
 
-## ¥ş§½³W«h
+- **æ›´æ–°æŠ€èƒ½**: è«‹åƒè€ƒ `skills/skill-factory/` çš„è¦ç¯„é€²è¡Œã€‚
+- **èª¿æ•´æº–å‰‡**: ä¿®æ­£ `rules/global_rules.md` å‰é ˆç¶“éã€Œè˜‡æ ¼æ‹‰åº•å¼éœ€æ±‚é‡æ¸…ã€æµç¨‹ã€‚
+- **ç–‘é›£æ’è§£**: åŸ·è¡Œ `/health-check` æŠ€èƒ½ä»¥ç¢ºèªç’°å¢ƒç‹€æ…‹ã€‚
 
-±M®×¥]§t§¹¾ãªº¥ş§½³W«h ([global_rules.md](rules/global_rules.md))¡A²[»\¡G
-
-- **»y¨¥µ´¹ï­ì«h**: «ä¦Ò¹Lµ{¨Ï¥ÎÁcÅé¤¤¤å¡Aµ{¦¡½X¨Ï¥Î­^¤å
-- **²Ä¤@©Ê­ì²z«äºû**: ±j¨î°õ¦æ©î¸Ñ»P­«ºc«ä¦Ò¼Ò¦¡
-- **«~½è­p¤À¨t²Î**: ¦Ûµû¾÷¨î»P­×¥¿Ä²µo
-- **¥æ¥I§Y¥Î­ì«h**: ¤@Áä±Ò°Ê»P§¹¾ã¤W¤U¤å
-- **½s½X¨ó©w**: UTF-8 ±j¨î³W½d
-
-## ¨Ï¥Î¤è¦¡
-
-### 1. §@¬°¥ş§½°t¸m
-±N¦¹±M®×©ñ¸m©ó `d:\Dev\GitHub\.agent`¡AAntigravity Agent ·|¦Û°Ê¸ü¤J¥ş§½³W«h»P§Ş¯à¡C
-
-### 2. §Ş¯à¤Ş¥Î
-¦b±M®×¯S©wªº `.agent` ¥Ø¿ı¤¤¤Ş¥Î¥ş§½§Ş¯à¡G
-
-```markdown
 ---
-trigger: always_on
-description: ±M®×¯S©w³W«h
----
-
-# ±M®×³W«h
-
-°Ñ¦Ò¥ş§½§Ş¯à¡G
-- [Python ¤uµ{³W½d](file:///d:/Dev/GitHub/.agent/skills/python-ops/SKILL.md)
-- [Docker ³W½d](file:///d:/Dev/GitHub/.agent/skills/docker-ops/SKILL.md)
-```
-
-## °^Äm
-
-Åwªï´£¥æ Issue ©Î Pull Request ¨Ó§ï¶i³W½d»P§Ş¯à©w¸q¡C
-
-## ±ÂÅv
-
-MIT License - ¸Ô¨£ [LICENSE](LICENSE)
-
-## §@ªÌ
-
-Larry Kang
+**æœ€å¾Œæ›´æ–°**: 2026-01-21  
+**ç¶­è­·è€…**: ğŸ•µï¸ [Agent: Auditor]  
+*Powered by Antigravity "Superpowers" Framework*
