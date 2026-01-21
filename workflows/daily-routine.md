@@ -32,7 +32,7 @@ description: 執行每日風險預測與市場掃描 (Daily Risk Forecast & Mark
    - 呼叫 `.agent/workflows/ticker-deep-dive.md` 並指定參數：`BTC`, `NVDA`, `TSMC`, `TSLA`。
    - 目的：僅針對核心持倉進行每日報價與模擬更新，大幅縮短執行時間。
 5. **產出報告**: 
-   - 彙整所有數據，建立/覆蓋檔案: `research/daily_briefs/Multi_Target_Analysis_[YYYYMMDD].md`。
+   - 彙整所有數據，建立/覆蓋檔案: `research/briefs/Multi_Target_Analysis_[YYYYMMDD].md`。
    - 格式請參考 `research/templates/daily_report_v5.md`。
 
 ## Phase 2: 模擬驗證 (Simulation)
