@@ -1,6 +1,8 @@
 ---
 name: git-ops
 description: Use when workflows need to version-control changes following specific branching strategies. Handles Git operations including branching, committing, and pushing.
+metadata:
+  version: "1.0.0"
 ---
 
 # Git Operations Skill

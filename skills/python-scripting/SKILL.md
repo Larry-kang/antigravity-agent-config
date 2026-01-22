@@ -1,6 +1,8 @@
 ---
 name: python-scripting
 description: Use when running any Python scripts in this project to avoid environment issues. Ensures correct Python script execution using project-specific interpreter.
+metadata:
+  version: "1.0.0"
 ---
 
 # Python Scripting Skill

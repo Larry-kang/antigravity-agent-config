@@ -1,6 +1,8 @@
 ---
 name: health-check
 description: Use when performing system health checks, environment repair, and report linting. Enforces workspace clean state.
+metadata:
+  version: "1.0.0"
 ---
 
 # Health Check Skill

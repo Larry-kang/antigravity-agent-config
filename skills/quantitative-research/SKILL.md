@@ -1,6 +1,8 @@
 ---
 name: quantitative-research
 description: Use when analyzing tickers or running financial simulations. Guides quantitative research workflows including data fetching, simulation, backtesting, and report generation.
+metadata:
+  version: "1.0.0"
 ---
 
 # Quantitative Research Skill

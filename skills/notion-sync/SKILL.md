@@ -1,6 +1,8 @@
 ---
 name: notion-sync
 description: Use when syncing research documents to Notion. Handles Notion synchronization operations including state management and encoding validation.
+metadata:
+  version: "1.0.0"
 ---
 
 # Notion Sync Skill

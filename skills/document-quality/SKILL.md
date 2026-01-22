@@ -1,6 +1,8 @@
 ---
 name: document-quality
-description: Use when ensuring generated documents meet quality standards or before committing research documents. Ensures compliance with encoding, language, and formatting standards.
+description: Use when ensuring all generated documents meet quality standards including encoding, language, and formatting. Enforces Traditional Chinese and UTF-8 standards.
+metadata:
+  version: "1.0.0"
 ---
 
 # Document Quality Skill
